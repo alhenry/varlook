@@ -154,7 +154,7 @@ if [[ ! -z "$pflag" && -s ${outdir}/Sentinel.vars.not.found ]]; then
 fi
 
 printf "\n\n=======================================================================================================\n"
-printf "Variant lookup complete. Summary:\n"
+printf "Variant lookup COMPLETE. Summary:\n"
 printf " - ${#vars[@]} variants searched in ${1}\n"
 #check if file exists and not empty
 if [ -s ${outdir}/Sentinel.vars.lookup.results ]; then
