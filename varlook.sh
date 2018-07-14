@@ -57,7 +57,7 @@ if [ -d $outdir ]; then
 	exit 1
 fi
 
-#START of PROGRAMME
+#START of PROGRAM
 
 printf "\n=======================================================================================================\nSTARTING variant lookup\n\n"
 
@@ -160,7 +160,7 @@ printf " - ${#vars[@]} variants searched in ${1}\n"
 if [ -s ${outdir}/Sentinel.vars.lookup.results ]; then
 	printf " - $(wc -l < ${outdir}/Sentinel.vars.lookup.results) sentinel variants found in ${1}\n"
 	printf "   Sentinel variant lookup results are written in ${outdir}/Sentinel.vars.lookup.results\n"
-	sed -i "1i $( awk 'NR==1 {print $0}' $1)" ${outdir}/Sentinel.vars.lookup.results
+	sed -i "1i $( awk 'NR==1 {print $0}' $1 )" ${outdir}/Sentinel.vars.lookup.results
 else
 	printf " - No sentinel variant found in $1 \n"
 fi
@@ -178,7 +178,7 @@ if [ ! -z "$pflag" ]; then
 		printf " - $(wc -l < ${outdir}/Proxy.vars.lookup.results) proxy variants with R2 > ${r2} found in ${1}\n"
 		printf "   Proxy variant lookup results are written in ${outdir}/Proxy.vars.lookup.results\n"
 		printf "   See ${outdir}/Proxy.vars.info for proxy variant info \n" 
-		sed -i "1i $( awk 'NR==1 {print $0}' $1)" ${outdir}/Proxy.vars.lookup.results
+		sed -i "1i $( awk 'NR==1 {print $0}' $1 )" ${outdir}/Proxy.vars.lookup.results
 		sed -i "1i $( awk 'NR==1 {print $0}' $( find ${outdir}/proxy_search/* | head -1 ))" ${outdir}/Proxy.vars.info
 		if [ -s ${outdir}/Sentinel_and_proxy.vars.not.found ]; then
 			printf " - $(wc -l < ${outdir}/Sentinel_and_proxy.vars.not.found) sentinel variant(s) have proxy with R2 > ${r2}, but none found in $1 (listed in ${outdir}/Sentinel_and_proxy.vars.not.found)\n"
@@ -190,7 +190,7 @@ fi
 
 #check if there is error in proxy search
 if [ ! -z "$errflag" ]; then
-	printf " - WARNING. At least one proxy search in LDlink database returned an error message. Please make sure all variant IDs are valid.\n"
+	printf " - WARNING. At least one proxy search in LDlink database returned an error message. Please make sure all submitted variant IDs are valid.\n"
 fi
 
 printf "\nHave a nice day! \n\n"
