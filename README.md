@@ -87,9 +87,9 @@ All output folders and files are put inside the output directory specified by op
     
     # Create an array of lookup datasets
     files=()
-    files=('~/path/to/GWAS_summary_stats_A.txt')
-    files=('~/path/to/GWAS_summary_stats_B.txt')
-    files=('~/path/to/GWAS_summary_stats_C.txt')
+    files+=('~/path/to/GWAS_summary_stats_A.txt')
+    files+=('~/path/to/GWAS_summary_stats_B.txt')
+    files+=('~/path/to/GWAS_summary_stats_C.txt')
     
     # Create an array of output directories, matching lookup datasets name & order
     out_dirs=('output_dir_A' 'output_dir_B' 'output_dir_C')
