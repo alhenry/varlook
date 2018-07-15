@@ -96,7 +96,7 @@ All output folders and files are put inside the output directory specified by op
     
     # Execute varlook in a loop
     for (( i = 0; i < ${#files[@]}; i++ )); do
-        varlook -f rsID_list.txt -p 0.9 -o ${out_dirs[$i]} ${files[$i]}
+        varlook -f rsID_list.txt -p 0.8 -o ${out_dirs[$i]} ${files[$i]}
     done
     
     ```
