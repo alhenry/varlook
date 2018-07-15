@@ -6,7 +6,7 @@ a tool for genetic variants lookup and proxy search
 varlook is a simple tool written in bash for extracting genetic variant(s) information from a dataset. Originally, the script was written to extract summary statistics for given variant IDs from publicly available GWAS results, but this tool can also potentially be used for other purposes, e.g. extracting genetic variant information from .vcf files.
 
 ### Dependencies
-varlook was built on a Linux machine (Red Hat Enterprise Linux Server 7.4) using several commands such as GNU sed (4.2.2) and GNU awk (4.0.2). While these tools are commonly found in Unix or Unix-like OS, please be aware that their behaviour can vary slightly across different versions and OSs, which might lead to errors.
+varlook was built on a Linux machine using several commands such as GNU sed (4.2.2) and GNU awk (4.0.2). While these tools are commonly found in Unix or Unix-like OS, please be aware that their behaviour can vary slightly across different versions and OSs, which might lead to errors.
 
 *MacOS users are recommended to install GNU sed, for example by typing the following command in a terminal window (requires [Homebrew](https://brew.sh/)):*
 
