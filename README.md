@@ -13,23 +13,28 @@ varlook was written in *GNU bash, version 4.2.46(2)-release (x86_64-redhat-linux
 `brew install --default-names gnu-sed`
 
 ### Installation
-1. Download the raw `varlook.sh` file from https://github.com/alhenry/varlook/raw/master/varlook, e.g. by typing the following in a Unix shell (change `/path/to/install` as necessary):
+1. Download and extract the source code from https://github.com/alhenry/varlook/archive/v1.0.0-alpha.tar.gz, e.g. by typing the following in a Unix shell (change `~/path/to/install` as necessary):
 
-    `wget https://github.com/alhenry/varlook/raw/master/varlook -P ~/path/to/install/`
+    ```
+    mkdir -p ~/path/to/install
+    cd ~/path/to/install
+    wget https://github.com/alhenry/varlook/archive/v1.0.0-alpha.tar.gz
+    tar xzf v1.0.0-alpha.tar.gz
+    ```
     
 2. Make the script executable:
     
-    `chmod +x ~/path/to/install/varlook`
+    `chmod +x ~/path/to/install/varlook-1.0.0-alpha/varlook`
     
-3. [OPTIONAL] Export `path/to/install` to `$PATH` variable and add to `~/.bash_profile`:
+3. [OPTIONAL] Export `~/path/to/install/varlook-1.0.0-alpha/` to `$PATH` variable and add to `~/.bash_profile`:
 
-    `echo 'export PATH="$PATH:~/path/to/install"' >> ~/.bash_profile`
+    `echo 'export PATH="$PATH:~/path/to/install/varlook-1.0.0-alpha/"' >> ~/.bash_profile`
     
 4. To run the program, type:
 
-    `. ~/path/to/install/varlook <options> <arguments>`
+    `. ~/path/to/install/varlook-1.0.0-alpha/varlook <options> <arguments>`
     
-   If step 3 has been done, we can also type:
+   If step 3 has been done, the command can be called directly without specifying the full path:
    
     `varlook <options> <arguments>`
     
