@@ -101,7 +101,8 @@ All output folders and files are put inside the output directory specified by op
     
     ```
 
-
+### Contact
+For more information and questions, please email albert.henry.16@ucl.ac.uk
 
 
 
